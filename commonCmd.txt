@@ -1,0 +1,23 @@
+g++ -c -fpic addFunc.cpp   #generate .o file
+g++ -shared addFunc.o -o libaddFunc.so  #generate .so
+g++ main.cpp -I ./ -L ./ -laddFunc -o mainApp   #link .so and generate executable file mainApp
+
+export LD_LIBRARY_PATH=动态库的绝对路径:$LD_LIBRARY_PATH   #temporarily set so library search path
+
+
+ldconfig -p > allCachedSo.txt  #write all loaded so into a file. according /usr/lib, /lib, and /etc/ld.so.conf 
+
+./<command> & #run in backend. kill when terminal process exit.
+
+nohup <command> & #run in backend, but not kill when terminal process exit.
+
+jobs  #list backend jobs.
+
+ps #list all process.
+
+ldd mainApp #list all needed so. and load them into memory. the helix number is virtual address.
+
+
+#重置VMware挂载盘
+sudo umount /mnt/hgfs
+sudo /usr/bin/vmhgfs-fuse .host:/ /mnt/hgfs -o allow_other -o uid=1000 -o gid=1000 -o umask=022

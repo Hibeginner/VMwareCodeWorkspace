@@ -1,5 +1,6 @@
-//gcc -fno-stack-protector -c a.o b.o  //-fno-stack-protector:no need stack protector
-//ld a.o b.o -e main -o ab
+//gcc -fno-stack-protector -c a.c b.c  //-fno-stack-protector:no need stack protector
+//ld a.o b.o -e main -o ab // gcc compile, must use gcc to link
+//gcc a.o b.o -o ab
 extern int shared;
 
 int main()

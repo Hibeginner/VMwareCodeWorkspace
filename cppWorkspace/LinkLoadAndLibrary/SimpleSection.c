@@ -15,6 +15,7 @@ int main(void)
     
     int a = 1;
     int b;
+    char *sayChar = "abcd";
     
     func1(static_var + static_var2 + a + b);
     return a;

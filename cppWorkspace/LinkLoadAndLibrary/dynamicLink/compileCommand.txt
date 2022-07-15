@@ -1,0 +1,7 @@
+gcc -fPIC -shared -o Lib.so Lib.c
+
+gcc -o program1 program1.c ./Lib.so
+gcc -o program2 program2.c ./Lib.so
+
+objdump -afxDS Lib.so > lib.so.Section.txt
+objdump -afxDS program1 > program1.Section.txt

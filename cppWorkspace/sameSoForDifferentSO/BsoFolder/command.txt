@@ -1,0 +1,1 @@
+g++ BClass.cpp -L ./ -laddFunc -fPIC -shared -o libBClass.so

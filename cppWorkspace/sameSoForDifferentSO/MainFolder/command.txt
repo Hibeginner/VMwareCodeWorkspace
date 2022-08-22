@@ -1,0 +1,1 @@
+g++ main.cpp -L ./ -laddFunc -lBClass -lCClass -o main

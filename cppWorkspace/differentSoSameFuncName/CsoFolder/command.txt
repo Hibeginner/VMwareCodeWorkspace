@@ -1,0 +1,1 @@
+g++ CClass.cpp -L ./ -lAaddFunc -fPIC -shared -o libCClass.so

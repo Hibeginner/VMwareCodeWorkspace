@@ -1,0 +1,1 @@
+g++ BaddFunc.cpp -fPIC -shared -o libBaddFunc.so

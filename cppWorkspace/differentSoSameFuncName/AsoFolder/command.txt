@@ -1,0 +1,1 @@
+g++ AaddFunc.cpp -fPIC -shared -o libAaddFunc.so
